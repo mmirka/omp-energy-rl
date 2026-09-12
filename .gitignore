@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+
+# Environments
+.venv/
+venv/
+env/
+
+# Compiled benchmarks -- rebuild with `make -C bench`
+bench/mixed_cxmy
+bench/two_phase
+*.o
+
+# Generated figures -- the folder stays (via .gitkeep), its contents don't
+figures/output/**
+!figures/output/.gitkeep
+
+# Training and controller runs -- results/ stays, runs don't
+results/**
+!results/.gitkeep
+
+# OS / editor cruft
+.DS_Store
+*.swp
