@@ -1,0 +1,37 @@
+# The stack this repository was developed and verified against.
+#
+# The pin is TensorFlow 2.2 / Keras 2.3.1 on Python 3.8, which is the era the
+# original work was done in. The package code targets tf.keras throughout and
+# runs on newer TensorFlow as well -- nothing here depends on 2.2 specifically,
+# so treat these as "known good", not "required".
+#
+# protobuf must stay below 3.20 or TF 2.2 fails to import at all
+# ("Descriptors cannot be created directly").
+#
+# Nothing in this repository needs a GPU: the autoencoder trains in about a
+# minute on CPU and the Q-network is smaller still.
+#
+# Create with:  conda env create -f environment.yml
+# Then:         conda activate omp-energy-rl
+name: omp-energy-rl
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.8
+  - pip
+  - pip:
+      - tensorflow==2.2.0
+      - keras==2.3.1
+      - protobuf==3.19.6
+      - numpy==1.18.5
+      - scipy==1.4.1
+      - pandas==1.4.4
+      - matplotlib==3.5.3
+      - h5py==2.10.0
+      # Reads the System V shared-memory segment the patched libgomp publishes.
+      # Only used by src/omp_energy_rl/environment.py, which requires the
+      # experimental testbed; everything else in the repository runs without it.
+      # Left commented out because it needs a C toolchain to build and is dead
+      # weight off-testbed -- install it explicitly if you have the hardware:
+      #     pip install sysv_ipc==1.1.0

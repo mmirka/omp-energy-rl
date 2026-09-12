@@ -1,0 +1,30 @@
+omp-energy-rl
+Copyright 2026 Maxime Mirka
+
+This product includes software developed by Maxime Mirka at LIRMM,
+Université de Montpellier / CNRS, as part of the PhD thesis "Techniques
+d'apprentissage pour le contrôle adaptatif multi-niveaux du calcul distribué"
+(2021), and published as:
+
+  M. Mirka et al., "Automatic Energy-Efficiency Monitoring of OpenMP
+  Applications", ReCoSoC 2019.
+  M. Mirka et al., "Online Learning for Dynamic Control of OpenMP Workloads",
+  MOCAST 2020.
+
+Third-party and previously-published material
+---------------------------------------------
+
+  figures/from_papers/**
+
+    Figures as printed in the papers and in the PhD thesis, kept for
+    side-by-side comparison against the rebuilt figures. These are the author's
+    own figures from the author's own publications; publication in ReCoSoC and
+    MOCAST involved a copyright transfer, so their reuse is governed by those
+    agreements and NOT by this repository's licence. They are excluded from the
+    Apache-2.0 and CC BY 4.0 grants above.
+
+  Patched GCC libgomp
+
+    The instrumented OpenMP runtime described in the papers is a modification of
+    GNU libgomp (GPL-3.0 with the GCC Runtime Library Exception). It is NOT
+    vendored here; see the repository README for how it was built.

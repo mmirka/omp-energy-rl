@@ -1,0 +1,74 @@
+cff-version: 1.2.0
+message: >-
+  If you use this software, please cite the ReCoSoC 2019 paper below, which
+  introduces the metric it is built on. The MOCAST 2020 paper, which introduces
+  the online control, is listed under references.
+title: >-
+  omp-energy-rl: online reinforcement-learning control of OpenMP energy
+  efficiency
+abstract: >-
+  Measures a parallel application's own progress from inside the OpenMP runtime
+  (chunks per second and chunks per Joule), detects its execution phases with
+  an autoencoder, and uses reinforcement learning to choose core count and clock
+  frequency while the application runs, with no prior profiling and no source
+  annotation.
+type: software
+authors:
+  - family-names: Mirka
+    given-names: Maxime
+repository-code: "https://github.com/mmirka/omp-energy-rl"
+license: Apache-2.0
+preferred-citation:
+  type: conference-paper
+  title: "Automatic Energy-Efficiency Monitoring of OpenMP Workloads"
+  authors:
+    - family-names: Mirka
+      given-names: Maxime
+    - family-names: Devic
+      given-names: Guillaume
+    - family-names: Bruguier
+      given-names: Florent
+    - family-names: Sassatelli
+      given-names: Gilles
+    - family-names: Gamatié
+      given-names: Abdoulaye
+  collection-title: >-
+    2019 14th International Symposium on Reconfigurable Communication-centric
+    Systems-on-Chip (ReCoSoC)
+  conference:
+    name: "ReCoSoC 2019"
+    city: York
+    country: GB
+  year: 2019
+  month: 7
+  start: 43
+  end: 50
+  publisher:
+    name: "IEEE"
+  doi: "10.1109/ReCoSoC48741.2019.9034988"
+  url: "https://hal-lirmm.ccsd.cnrs.fr/lirmm-02183901v1"
+references:
+  - type: conference-paper
+    title: "Online Learning for Dynamic Control of OpenMP Workloads"
+    authors:
+      - family-names: Mirka
+        given-names: Maxime
+      - family-names: Sassatelli
+        given-names: Gilles
+      - family-names: Gamatié
+        given-names: Abdoulaye
+    collection-title: >-
+      2020 9th International Conference on Modern Circuits and Systems
+      Technologies (MOCAST)
+    conference:
+      name: "MOCAST 2020"
+      city: Bremen
+      country: DE
+    year: 2020
+    month: 9
+    start: 1
+    end: 6
+    publisher:
+      name: "IEEE"
+    doi: "10.1109/MOCAST49295.2020.9200292"
+    url: "https://hal.science/hal-02565961v1"
